@@ -1,6 +1,8 @@
 #include "libft.h"
 #include <stdio.h>
 
+
+// create a big struct
 typedef struct s_point
 {
 	int x;
