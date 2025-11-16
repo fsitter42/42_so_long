@@ -1,13 +1,10 @@
-int check_borders(char **s)
+int	check_borders(char **s, int xmax, int ymax)
 {
-	int i = 0;
-	int firstline;
-	int lastline;
-	int fistcol;
-	int lastcol;
+	int	i;
+	int	j;
 
-	int j = 0;
-
+	i = 0;
+	j = 0;
 	while (s[i][j])
 	{
 		if (s[i][j] != '1')
@@ -20,8 +17,19 @@ int check_borders(char **s)
 		if (s[i][0] != '1' || s[i][xmax] != '1')
 			return (0);
 		i++;
-		// letzte libe fehlt
-
+	}
+	j = 0;
+	while (s[ymax][j])
+	{
+		if (s[ymax][j] != '1')
+			return (0);
+		j++;
+	}
 }
 
 // eventuell int check_borders(char **map, int xmax, int xmin)
+
+int main()
+{
+	
+}

@@ -34,6 +34,8 @@ char **make_map(char *mapfile)
 
 	line_count = count_lines(mapfile);
 	map = malloc(sizeof(char *) * (line_count + 1));
+	if (!map)
+		return (0);
 	row = 0;
 	fd = open(mapfile, O_RDONLY);
 	while (row < line_count)
