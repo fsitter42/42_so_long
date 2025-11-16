@@ -26,4 +26,9 @@ int	check_borders(char **s, int xmax, int ymax)
 	return (1);
 }
 
+int check_form(char **s)
+{
+	
+}
+
 // eventuell int check_borders(char **map, int xmax, int xmin)

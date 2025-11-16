@@ -17,6 +17,15 @@ int main()
 
 	ft_printf("%i\n", count_of(map, 'c'));
 
+	ft_printf("%i\n", ft_strlen(map[0]) -1);
+
+	int b = check_borders(map, (ft_strlen(map[0])) - 1, count_lines("aaa.ber") - 1);
+
+	if (b == 1)
+		ft_printf("Borders are closed\n");
+	else
+		ft_printf("Borders are open\n");
+
 	while(map[i])
 	{
 		ft_printf("%s\n", map[i]);
