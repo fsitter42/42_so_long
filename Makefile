@@ -2,11 +2,12 @@ NAME = solong.a
 
 SOURCE = 	mapstuff.c \
 		count_stuff.c \
-		borders.c
+		borders.c \
+		main.c
 
-HEADER = solong.h
+HEADER = so_long.h
 
-CFLAGS += -Wall -Wextra -Werror
+#CFLAGS += -Wall -Wextra -Werror
 
 OBJECTS = $(SOURCE:.c=.o)
 
