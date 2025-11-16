@@ -1,4 +1,7 @@
-#include <stdio.h>
+#include "so_long.h"
+
+int count_of(char **map, char what_to_find);
+
 int count_of(char **map, char what_to_find)
 {
 	int c_count = 0;
@@ -17,10 +20,3 @@ int count_of(char **map, char what_to_find)
 	return (c_count);
 }
 
-// int main()
-// {
-// 	char *hello[] = {"hello", "cousin", NULL};
-
-// 	//printf("%c\n", hello[0][2]);
-// 	printf("%i\n", count_of(hello, 'o'));
-// }

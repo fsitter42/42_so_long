@@ -1,5 +1,9 @@
 #include "so_long.h"
 
+int	check_borders(char **map, int xmax, int ymax);
+int	check_form(char **map);
+int	check_signs(char **map);
+
 int	check_borders(char **map, int xmax, int ymax)
 {
 	int	i;
@@ -65,5 +69,3 @@ int	check_signs(char **map)
 	}
 	return (1);
 }
-
-// eventuell int check_borders(char **map, int xmax, int xmin)

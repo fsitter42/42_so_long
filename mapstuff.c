@@ -1,5 +1,8 @@
 #include "so_long.h"
 
+int	count_lines(char *mapfile);
+char **make_map(char *mapfile);
+
 int	count_lines(char *mapfile)
 {
 	int		fd;
