@@ -58,5 +58,6 @@ int main()
 		i++;
 	}
 	free(map);
+	ft_printf("hello\n");
 	
 }

@@ -31,6 +31,8 @@ fclean:	clean
 re:		fclean all
 all:	${NAME}
 make:	make all
+aout:
+	cc *c libft/libft.a -g
 
 
 .PHONY: clean fclean re all
