@@ -3,6 +3,7 @@
 int	check_borders(char **map, int xmax, int ymax);
 int	check_form(char **map);
 int	check_signs(char **map);
+void find_sign(char **map, char to_find, int *x, int *y);
 
 int	check_borders(char **map, int xmax, int ymax)
 {
@@ -68,4 +69,27 @@ int	check_signs(char **map)
 		i++;
 	}
 	return (1);
+}
+
+void find_sign(char **map, char to_find, int *x, int *y)
+{
+	int		i;
+	int		j;
+
+	i = 0;
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] == to_find)
+			{
+				*x = i;
+				*y = j;
+				return;
+			}
+			j++;
+		}
+		i++;
+	}
 }

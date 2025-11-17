@@ -19,7 +19,7 @@ int main()
 
 	ft_printf("%i\n", ft_strlen(map[0]) -1);
 
-	int borders = check_borders(map, (ft_strlen(map[0])) - 1, count_lines("aaa.ber") - 1);
+	int borders = check_borders(map, ((ft_strlen(map[0])) - 1), count_lines("aaa.ber") - 1);
 
 	if (borders == 1)
 		ft_printf("Borders are closed\n");
@@ -41,8 +41,14 @@ int main()
 		ft_printf("ERROR: Map is not filled correct\n");
 
 
+	int x = 0;
+	int y = 0;
 
+	char to_find = 'p';
 
+	find_sign(map, to_find, &x, &y);
+
+	ft_printf("The char %c, is at postion x: %i and y: %i\n", to_find, x, y);
 
 	ft_printf("\n");
 	while(map[i])

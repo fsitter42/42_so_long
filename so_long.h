@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/16 16:36:39 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/17 13:52:03 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int count_of(char **map, char what_to_find);
 int	check_borders(char **map, int xmax, int ymax);
 int check_form(char **map);
 int check_signs(char **map);
+void find_sign(char **map, char to_find, int *x, int *y);
 
 
 
