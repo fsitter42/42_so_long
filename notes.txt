@@ -3,6 +3,7 @@ Map:
 	DONE! function to check if there are other signs then the ones allowed
 	check for valid path > floodfill
 	after valid path > check with strchr if collectables are left
+ function to find P (startingpos) or E
 
 Winwdow:
 
