@@ -6,14 +6,14 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:40:27 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 14:50:01 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/18 16:39:24 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 int		count_lines(char *mapfile);
-char	**make_map(char *mapfile);
+char	**make_map(char *mapfile, int fd);
 
 int	count_lines(char *mapfile)
 {
@@ -37,12 +37,12 @@ int	count_lines(char *mapfile)
 	return (line_count);
 }
 
-char	**make_map(char *mapfile)
+char	**make_map(char *mapfile, int fd)
 {
 	int		line_count;
 	char	**map;
 	int		row;
-	int		fd;
+	//int		fd;
 	size_t	last;
 
 	line_count = count_lines(mapfile);
@@ -50,7 +50,7 @@ char	**make_map(char *mapfile)
 	if (!map)
 		return (0);
 	row = 0;
-	fd = open(mapfile, O_RDONLY);
+	//fd = open(mapfile, O_RDONLY);
 	while (row < line_count)
 	{
 		map[row] = get_next_line(fd);

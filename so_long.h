@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 14:21:26 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/18 16:31:39 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 // mapstuff.c
 int			count_lines(char *mapfile);
-char		**make_map(char *mapfile);
+char		**make_map(char *mapfile, int fd);
 
 // count_stuff.c
 int			count_of(char **map, char what_to_find);
@@ -30,6 +30,7 @@ void		find_sign(char **map, char to_find, int *x, int *y);
 
 // comandline_input.c
 int			check_input(int argc, char *argv);
+int			check_fd(char *argv);
 
 // struct to safe mapdata
 struct		s_mapdata
