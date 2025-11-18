@@ -1,3 +1,7 @@
+	MAPSTUFF.c notes darunter beachten
+	MAPSTUFF.c notes darunter beachten
+	MAPSTUFF.c notes darunter beachten
+
 Map:
 
 	DONE! function to check if there are other signs then the ones allowed
@@ -13,3 +17,6 @@ Main:
 	fill struct
 	check validity with against struct
 	maybe create a stuct called valid to safe valid values and compare against them
+
+
+

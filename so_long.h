@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 16:31:39 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/18 16:57:28 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 // mapstuff.c
 int			count_lines(char *mapfile);
-char		**make_map(char *mapfile, int fd);
+char		**make_map(char *mapfile);
 
 // count_stuff.c
 int			count_of(char **map, char what_to_find);

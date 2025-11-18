@@ -6,14 +6,14 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:40:27 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 16:40:21 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/18 17:06:13 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 int		count_lines(char *mapfile);
-char	**make_map(char *mapfile, int fd);
+char	**make_map(char *mapfile);
 
 int	count_lines(char *mapfile)
 {
@@ -37,13 +37,17 @@ int	count_lines(char *mapfile)
 	return (line_count);
 }
 
-char	**make_map(char *mapfile, int fd)
+char	**make_map(char *mapfile)
 {
 	int		line_count;
 	char	**map;
 	int		row;
+	int		fd;
 	size_t	last;
 
+	fd = open(mapfile, O_RDONLY);
+	if (fd < 0)
+		return (ft_putstr_fd("Error: filediscriptor\n", 2), NULL);
 	line_count = count_lines(mapfile);
 	map = malloc(sizeof(char *) * (line_count + 1));
 	if (!map)
@@ -61,6 +65,16 @@ char	**make_map(char *mapfile, int fd)
 	close(fd);
 	return (map);
 }
+
+
+// make_map > nicht mapfile passen sondern struct dann spare ich line
+// int line_count und char **map  und size_t last weil ich alles damit passe
+// line_count - 1 = mapdata.map_width 
+// map = mapdata.map
+// last - 1 = mapdata.map_height 
+
+
+
 
 // void	fill(char **area, t_point size, t_point vec, char to_fill)
 // {
