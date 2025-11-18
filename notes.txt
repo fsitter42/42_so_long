@@ -29,3 +29,11 @@ Main:
 
 DEFINE STRUCTS IN HEADER BEFORE FUNCTION PROTOTYPES
 structs nach oben!!!
+
+bash function einfügen in zsh rc:
+gitall() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
