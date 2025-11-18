@@ -7,3 +7,9 @@ Map:
 
 Winwdow:
 
+Main:
+	check check_input
+	open
+	fill struct
+	check validity with against struct
+	maybe create a stuct called valid to safe valid values and compare against them
