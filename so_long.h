@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 13:14:20 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 13:59:37 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,12 @@ int			check_form(char **map);
 int			check_signs(char **map);
 void		find_sign(char **map, char to_find, int *x, int *y);
 
-// check_and_find_all.c
-void		find_all();
-void		check_all();
-
-// comandline_input.c
+// input_and_all.c
 int			check_input(int argc, char *argv);
-int			check_fd(char *argv); // brauche ich nicht
+int			check_all(struct s_mapdata *data);
+int			count_all(struct s_mapdata *data);
+void		find_all(struct s_mapdata *data);
+
 // check_path.c
 // int			check_path(struct s_mapdata mapdata);
 int			fill_mapdata(struct s_mapdata *data, char *mapfile);
