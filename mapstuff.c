@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:40:27 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 12:55:48 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 16:13:54 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int		count_lines(char *mapfile);
 char	**make_map(char *mapfile, struct s_mapdata *data);
 int		count_of(char **map, char what_to_find);
+char	**free_map(char **map);
 
 int	count_lines(char *mapfile)
 {
@@ -85,6 +86,21 @@ int	count_of(char **map, char what_to_find)
 		i++;
 	}
 	return (c_count);
+}
+
+char	**free_map(char **map)
+{
+	int	i;
+
+	i = 0;
+	while (map[i])
+	{
+		ft_printf("%s\n", map[i]);
+		free(map[i]);
+		i++;
+	}
+	free(map);
+	return (NULL);
 }
 
 // make_map > nicht mapfile passen sondern struct dann spare ich lines

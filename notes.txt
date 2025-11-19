@@ -22,6 +22,8 @@ Main:
 	DONE! fill struct
 	DONE! check and find stuff
 	check path
+	DONE! free map function
+	delete ft_printf int free_map
 
 	check validity with against struct
 	maybe create a stuct called valid to safe valid values and compare against them

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 14:55:12 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 16:03:16 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct s_point
 int			count_lines(char *mapfile);
 char		**make_map(char *mapfile, struct s_mapdata *data);
 int			count_of(char **map, char what_to_find);
+char		**free_map(char **map);
 
 // check_and_find.c
 int			check_borders(char **map, int xmax, int ymax);
@@ -55,7 +56,8 @@ int			count_all(struct s_mapdata *data);
 void		find_all(struct s_mapdata *data);
 
 // check_path.c
-// int			check_path(struct s_mapdata mapdata);
+int			check_path(struct s_mapdata *data, char *mapfile);
 int			fill_mapdata(struct s_mapdata *data, char *mapfile);
+int			fill_count(struct s_mapdata *data, char **cpy_map, int x, int y);
 
 #endif

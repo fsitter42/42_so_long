@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 15:38:11 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 14:57:16 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 16:12:41 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,23 @@ int	main(int argc, char **argv)
 		return (1);
 	if (fill_mapdata(&mapdata, argv[1]) == 0)
 		return (1);
+	if (check_path(&mapdata, argv[1]) == 0)
+		return (1);
+	ft_printf("valid path\n");
+	ft_printf("valid path\n");
+	ft_printf("valid path\n");
 
-	int i = 0;
-	while (mapdata.map[i])
-	{
-		ft_printf("%s\n", mapdata.map[i]);
-		free(mapdata.map[i]);
-		i++;
-	}
-	free(mapdata.map);
+	// we are here
+
+	// int i = 0;
+	// while (mapdata.map[i])
+	// {
+	// 	ft_printf("%s\n", mapdata.map[i]);
+	// 	free(mapdata.map[i]);
+	// 	i++;
+	// }
+	// free(mapdata.map);
+	free_map(mapdata.map);
 	ft_printf("\n");
 	ft_printf("Player count: %i\n", mapdata.player_c);
 	ft_printf("Exit count: %i\n", mapdata.exit_c);

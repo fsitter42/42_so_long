@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 14:59:20 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 16:15:32 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	check_map_all(struct s_mapdata *data)
 		ft_printf("Error: Not rectangular!\n");
 		return (0);
 	}
-	if (check_borders(data->map, data->map_width_x-1, data->map_height_y-1) == 0)
+	if (check_borders(data->map, data->map_width_x - 1, data->map_height_y
+			- 1) == 0)
 	{
 		ft_printf("Error: Borders!\n");
 		return (0);
