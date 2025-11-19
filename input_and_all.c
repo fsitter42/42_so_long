@@ -6,14 +6,14 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 14:06:32 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 14:59:20 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 int		check_input(int argc, char *argv);
-int		check_all(struct s_mapdata *data);
+int		check_map_all(struct s_mapdata *data);
 int		count_all(struct s_mapdata *data);
 void	find_all(struct s_mapdata *data);
 
@@ -40,16 +40,16 @@ int	check_input(int argc, char *argv)
 	return (1);
 }
 
-int	check_all(struct s_mapdata *data)
+int	check_map_all(struct s_mapdata *data)
 {
-	if (check_borders(data->map, data->map_width_x-1, data->map_height_y-1) == 0)
-	{
-		ft_printf("Error: Borders!\n");
-		return (0);
-	}
 	if (check_form(data->map) == 0)
 	{
 		ft_printf("Error: Not rectangular!\n");
+		return (0);
+	}
+	if (check_borders(data->map, data->map_width_x-1, data->map_height_y-1) == 0)
+	{
+		ft_printf("Error: Borders!\n");
 		return (0);
 	}
 	if (check_signs(data->map) == 0)

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 15:38:11 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 14:09:23 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 14:57:16 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	main(int argc, char **argv)
 
 	if (check_input(argc, argv[1]) == 0)
 		return (1);
-	fill_mapdata(&mapdata, argv[1]);
+	if (fill_mapdata(&mapdata, argv[1]) == 0)
+		return (1);
 
-		
 	int i = 0;
 	while (mapdata.map[i])
 	{
