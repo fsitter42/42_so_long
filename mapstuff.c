@@ -6,14 +6,15 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:40:27 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 17:10:50 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 12:55:48 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
 int		count_lines(char *mapfile);
-char	**make_map(char *mapfile);
+char	**make_map(char *mapfile, struct s_mapdata *data);
+int		count_of(char **map, char what_to_find);
 
 int	count_lines(char *mapfile)
 {
@@ -37,45 +38,61 @@ int	count_lines(char *mapfile)
 	return (line_count);
 }
 
-char	**make_map(char *mapfile)
+char	**make_map(char *mapfile, struct s_mapdata *data)
 {
-	int		line_count;
 	char	**map;
 	int		row;
 	int		fd;
-	size_t	last;
 
 	fd = open(mapfile, O_RDONLY);
 	if (fd < 0)
 		return (ft_putstr_fd("Error: filediscriptor\n", 2), NULL);
-	line_count = count_lines(mapfile);
-	map = malloc(sizeof(char *) * (line_count + 1));
+	data->map_height_y = count_lines(mapfile);
+	map = malloc(sizeof(char *) * (data->map_height_y + 1));
 	if (!map)
 		return (ft_putstr_fd("Error: malloc error\n", 2), NULL);
 	row = 0;
-	while (row < line_count)
+	while (row < data->map_height_y)
 	{
 		map[row] = get_next_line(fd);
-		last = ft_strlen(map[row]);
-		if (map[row][last - 1] == '\n')
-			map[row][last - 1] = '\0';
+		data->map_width_x = (int)ft_strlen(map[row]);
+		if (map[row][data->map_width_x - 1] == '\n')
+			map[row][data->map_width_x - 1] = '\0';
 		row++;
 	}
-	map[line_count] = NULL;
+	map[data->map_height_y] = NULL;
 	close(fd);
 	return (map);
 }
 
+int	count_of(char **map, char what_to_find)
+{
+	int	c_count;
+	int	i;
+	int	j;
+
+	c_count = 0;
+	i = 0;
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] == what_to_find)
+				c_count++;
+			j++;
+		}
+		i++;
+	}
+	return (c_count);
+}
 
 // make_map > nicht mapfile passen sondern struct dann spare ich lines
 // und muss es nicht nochmal ausführen
 // int line_count und char **map  und size_t last weil ich alles damit passe
-// line_count - 1 = mapdata.map_width 
+// line_count - 1 = mapdata.map_width
 // map = mapdata.map
-// last - 1 = mapdata.map_height 
-
-
-
+// last - 1 = mapdata.map_height
 
 // void	fill(char **area, t_point size, t_point vec, char to_fill)
 // {

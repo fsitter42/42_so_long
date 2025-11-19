@@ -8,7 +8,7 @@
 int check_path(struct mapdata, mapfile)function > mapcopy = Malloc/calloc(sizeof(map(+1?)); int i =0; while(mapcopy){ strdup(mapcopy[i], map[i]; i++;} 
 mapcopy[i] = NULL; fill(mapdata, mapcopy);
 
-make_map(char *mapfile, int linecount) ändern
+make_map(char *mapfile, int linecount) > struct übergeben hat alles
 
 Map:
 
@@ -26,14 +26,4 @@ Main:
 	check validity with against struct
 	maybe create a stuct called valid to safe valid values and compare against them
 
-
-DEFINE STRUCTS IN HEADER BEFORE FUNCTION PROTOTYPES
-structs nach oben!!!
-
-bash function einfügen in zsh rc:
-gitall() {
-  git add .
-  git commit -m "$1"
-  git push
-}
 

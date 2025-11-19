@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 16:27:23 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 12:55:33 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	check_input(int argc, char *argv)
 {
 	char	*file_ex;
 
-	ft_printf("%s\n", argv);
 	if (argc != 2)
 	{
 		ft_printf("Error: wrong number of argmuents!\n");

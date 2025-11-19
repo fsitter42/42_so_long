@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 15:38:11 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 17:02:07 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/19 12:54:17 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,20 @@ int	main(int argc, char **argv)
 		return (1);
 	fill_mapdata(&mapdata, argv[1]);
 
-	ft_printf("%i\n", mapdata.map_height);
-	ft_printf("hello");
+		
+	int i = 0;
+	while (mapdata.map[i])
+	{
+		ft_printf("%s\n", mapdata.map[i]);
+		free(mapdata.map[i]);
+		i++;
+	}
+	free(mapdata.map);
+	ft_printf("\n");
+	ft_printf("x: %i\n", mapdata.map_width_x);
+	ft_printf("y: %i\n", mapdata.map_height_y);
+	ft_printf("\n");
 }
 
 // += t_data data; // for window zeile 18
 
-	// mapdata.map = make_map(argv[1], fd);
-	// int i = 0;
-	// while (mapdata.map[i])
-	// {
-	// 	ft_printf("%s\n", mapdata.map[i]);
-	// 	free(mapdata.map[i]);
-	// 	i++;
-	// }
-	// free(mapdata.map);
-	// ft_printf("hello\n");
