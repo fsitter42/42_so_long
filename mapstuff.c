@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:40:27 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/19 16:19:24 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/20 14:30:11 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ char	**free_map(char **map)
 	i = 0;
 	while (map[i])
 	{
-		ft_printf("%s\n", map[i]);
 		free(map[i]);
 		i++;
 	}
