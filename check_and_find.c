@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   borders.c                                          :+:      :+:    :+:   */
+/*   check_and_find.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:43 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/18 14:18:53 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/20 15:10:25 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,16 @@ int	check_form(char **map)
 
 int	check_signs(char **map)
 {
-	int		i;
-	int		j;
-	char	*valid_signs;
+	int	i;
+	int	j;
 
-	valid_signs = "pce01";
 	i = 0;
 	while (map[i])
 	{
 		j = 0;
 		while (map[i][j])
 		{
-			if (!(ft_strchr(valid_signs, map[i][j])))
+			if (!(ft_strchr(VALIDSIGN, map[i][j])))
 				return (0);
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/20 15:06:22 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/20 15:10:00 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft/libft.h"
 
+# define VALIDSIGN "pce01"
 // struct to safe mapdata
 typedef struct s_mapdata
 {
