@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 19:06:29 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/22 13:06:36 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/22 13:22:46 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@
 # define PLAYER 'p'
 # define COIN 'c'
 # define EXIT 'e'
+# define BORDER '1'
 # define TRUE 1
 # define FALSE 0
+# define EXTENSION ".ber"
+
 // struct to safe mapdata
 typedef struct s_mapdata
 {

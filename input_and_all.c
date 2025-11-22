@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:34 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/22 13:10:00 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/22 13:23:14 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,17 @@ void	find_all(t_mapdata *data);
 
 int	check_input(int argc, char *argv)
 {
-	char	*file_ex;
-
 	if (argc != 2)
 	{
 		ft_printf("Error: wrong number of argmuents!\n");
 		return (FALSE);
 	}
-	file_ex = ".ber";
-	if (!(ft_strnstr(argv, file_ex, ft_strlen(argv))))
+	if (!(ft_strnstr(argv, EXTENSION, ft_strlen(argv))))
 	{
 		ft_printf("Error: wrong fileextension!\n");
 		return (FALSE);
 	}
-	if (ft_strlen(ft_strnstr(argv, file_ex, ft_strlen(argv))) != 4)
+	if (ft_strlen(ft_strnstr(argv, EXTENSION, ft_strlen(argv))) != 4)
 	{
 		ft_printf("Error: wrong fileextension!\n");
 		return (FALSE);

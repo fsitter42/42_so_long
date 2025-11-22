@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:43 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/22 13:02:17 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/22 13:20:51 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,20 @@ int	check_borders(char **map, int xmax, int ymax)
 	j = 0;
 	while (map[i][j])
 	{
-		if (map[i][j++] != '1')
+		if (map[i][j++] != BORDER)
 			return (FALSE);
 	}
 	i = 0;
 	while (map[i])
 	{
-		if (map[i][0] != '1' || map[i][xmax] != '1')
+		if (map[i][0] != BORDER || map[i][xmax] != BORDER)
 			return (FALSE);
 		i++;
 	}
 	j = 0;
 	while (map[ymax][j])
 	{
-		if (map[ymax][j++] != '1')
+		if (map[ymax][j++] != BORDER)
 			return (FALSE);
 	}
 	return (TRUE);
