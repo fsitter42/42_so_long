@@ -35,4 +35,6 @@ create map() give map and windowdata to it
 	return
 
 
-	game.c zeile 39 load pixmaps
+	game.c zeile 98 zeile zu lange
+	geht es mit formatting oder funktion
+	zeile 42
