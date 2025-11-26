@@ -7,7 +7,7 @@ SOURCE = 	mapstuff.c \
 
 HEADER = so_long.h
 
-#CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -Wall -Wextra -Werror -g -lmlx -lX11 -lXext -lm
 
 OBJECTS = $(SOURCE:.c=.o)
 
@@ -19,10 +19,10 @@ CREATION = ar rcs
 
 
 .c.o:
-	${CC} ${CFLAGS} -I . -c $< -o ${<:.c=.o}
+	${CC} libft/libft.a ${CFLAGS} -I . -c $< -o ${<:.c=.o} 
 
-${NAME}: ${OBJECTS} ${HEADER}
-	${CREATION} ${NAME} ${OBJECTS}
+#${NAME}: ${OBJECTS} ${HEADER}
+#	${CREATION} ${NAME} ${OBJECTS}
 
 clean:	
 	${RM} ${OBJECTS}
@@ -32,7 +32,7 @@ re:		fclean all
 all:	${NAME}
 make:	make all
 aout:
-	cc *c libft/libft.a -g -lmlx -lX11 -lXext -lm
+	cc *c libft/libft.a -g -lmlx -lX11 -lXext -lm -Wall -Wextra -Werror
 
 
 .PHONY: clean fclean re all

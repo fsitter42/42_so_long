@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 14:17:43 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/22 13:20:51 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/26 16:44:11 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	check_borders(char **map, int xmax, int ymax)
 int	check_form(char **map)
 {
 	int	i;
-	int	firstline_len;
+	size_t	firstline_len;
 
 	firstline_len = ft_strlen(map[0]);
 	i = 1;
