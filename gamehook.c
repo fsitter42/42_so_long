@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 00:37:13 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/26 13:58:08 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/26 14:05:13 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	key(int keysym, t_windata *win)
 		move_right(win);
 	if (keysym == 'w')
 		move_up(win);
-	ft_printf("%i\n", win->mapdata->coin_c);
 	win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] = EXIT;
 	fillwindow(win);
 	end_game(win);
