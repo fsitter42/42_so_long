@@ -1,13 +1,2 @@
-gamehook.c
-
-	NOT NEEDED! keysym -> asdw keys
-	DONE! check exit nach jedem key(); end_game()
-
-controls.c/rules
-
-	asdw moves
-	DONE! check valid move
-	check if i was on exit?? or also make walking on EXIT invalid if coin_c > 0
-	restore_exit();
-	
-	print move
+MAKEFILE
+clean folder
