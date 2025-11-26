@@ -4,3 +4,5 @@ clean folder
 cleanup and push!
 
 chars Großschreibung 
+# define WINNAME "so_long"
+Und in Funktion ändern
