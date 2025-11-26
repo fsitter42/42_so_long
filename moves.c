@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 13:29:05 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/26 14:04:45 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/26 15:01:29 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	move_left(t_windata *win)
 		win->mapdata->coin_c--;
 	win->mapdata->map[x][y] = BG;
 	// restore_exit();
+	if (win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] != PLAYER)
+		win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] = EXIT;
 	win->mapdata->map[x][y - 1] = PLAYER;
 	win->mapdata->playerposition_y -= 1;
 	print_move();
@@ -49,6 +51,8 @@ void	move_down(t_windata *win)
 		win->mapdata->coin_c--;
 	win->mapdata->map[x][y] = BG;
 	// restore_exit();
+	if (win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] != PLAYER)
+		win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] = EXIT;
 	win->mapdata->map[x + 1][y] = PLAYER;
 	win->mapdata->playerposition_x += 1;
 	print_move();
@@ -67,6 +71,8 @@ void	move_right(t_windata *win)
 		win->mapdata->coin_c--;
 	win->mapdata->map[x][y] = BG;
 	// restore_exit();
+	if (win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] != PLAYER)
+		win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] = EXIT;
 	win->mapdata->map[x][y + 1] = PLAYER;
 	win->mapdata->playerposition_y += 1;
 	print_move();
@@ -85,6 +91,8 @@ void	move_up(t_windata *win)
 		win->mapdata->coin_c--;
 	win->mapdata->map[x][y] = BG;
 	// restore_exit();
+	if (win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] != PLAYER)
+		win->mapdata->map[win->mapdata->exitposition_x][win->mapdata->exitposition_y] = EXIT;
 	win->mapdata->map[x - 1][y] = PLAYER;
 	win->mapdata->playerposition_x -= 1;
 	print_move();
@@ -93,5 +101,5 @@ void	print_move(void)
 {
 	static int	c_moves;
 
-	ft_printf("%i\n", ++c_moves);
+	ft_printf("Moves: %i\n", ++c_moves);
 }
