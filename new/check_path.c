@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 12:18:54 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 15:03:05 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 15:30:33 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	fill_count(t_mapdata *data, char **cpy_map, int x, int y)
 	static int	coin;
 	static int	exit;
 
-	if ((y < 0) || (x < 0) || (y > data->map_height_y - 1)
-		|| (x > data->map_width_x - 1) || (cpy_map[x][y] == '1')
+	if ((y < 0) || (x < 0) || (x > data->map_height_y - 1)
+		|| (y > data->map_width_x - 1) || (cpy_map[x][y] == '1')
 		|| (cpy_map[x][y] == '9'))
 		return (0);
 	if (cpy_map[x][y] == COIN)
