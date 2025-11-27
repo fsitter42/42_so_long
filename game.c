@@ -6,7 +6,7 @@
 /*   By: fsitter <fsitter@student.42vienna.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 13:32:49 by fsitter           #+#    #+#             */
-/*   Updated: 2025/11/27 11:36:29 by fsitter          ###   ########.fr       */
+/*   Updated: 2025/11/27 11:44:33 by fsitter          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,15 +78,15 @@ void	del_dest_cl(t_windata *win, int code)
 
 void	my_xpm_to_img(t_windata *win)
 {
-	win->img[0].img = mlx_xpm_file_to_image(win->mlx_ptr, "./pixmaps/BG.xpm",
+	win->img[0].img = mlx_xpm_file_to_image(win->mlx_ptr, "./textures/BG.xpm",
 			&win->img->img_w_x, &win->img->img_h_y);
-	win->img[1].img = mlx_xpm_file_to_image(win->mlx_ptr, "./pixmaps/W.xpm",
+	win->img[1].img = mlx_xpm_file_to_image(win->mlx_ptr, "./textures/W.xpm",
 			&win->img->img_w_x, &win->img->img_h_y);
-	win->img[2].img = mlx_xpm_file_to_image(win->mlx_ptr, "./pixmaps/P.xpm",
+	win->img[2].img = mlx_xpm_file_to_image(win->mlx_ptr, "./textures/P.xpm",
 			&win->img->img_w_x, &win->img->img_h_y);
-	win->img[3].img = mlx_xpm_file_to_image(win->mlx_ptr, "./pixmaps/NV.xpm",
+	win->img[3].img = mlx_xpm_file_to_image(win->mlx_ptr, "./textures/NV.xpm",
 			&win->img->img_w_x, &win->img->img_h_y);
-	win->img[4].img = mlx_xpm_file_to_image(win->mlx_ptr, "./pixmaps/E.xpm",
+	win->img[4].img = mlx_xpm_file_to_image(win->mlx_ptr, "./textures/E.xpm",
 			&win->img->img_w_x, &win->img->img_h_y);
 	if (!win->img[0].img || !win->img[1].img || !win->img[2].img
 		|| !win->img[3].img || !win->img[4].img)
